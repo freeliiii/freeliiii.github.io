@@ -12,7 +12,7 @@
 <meta property="og:title" content="李金圣的博客">
 <meta property="og:url" content="http://yoursite.com/index.html">
 <meta property="og:site_name" content="李金圣的博客">
-<meta property="og:locale" content="en_US">
+<meta property="og:locale" content="zh_CN">
 <meta property="article:author" content="李金圣">
 <meta name="twitter:card" content="summary">
   
@@ -34,6 +34,7 @@
 
 <meta name="generator" content="Hexo 4.2.1"><link rel="stylesheet" href="\assets\css\APlayer.min.css" class="aplayer-style-marker">
 <script src="\assets\js\APlayer.min.js" class="aplayer-script-marker"></script>
+<script src="\assets\js\Meting.min.js" class="meting-script-marker"></script>
 </head>
 
 <body>
@@ -87,12 +88,60 @@
 					<a class="mail" target="_blank" href="https://freeliiii.github.io/2020/07/05/%E4%B8%AA%E4%BA%BA%E9%82%AE%E7%AE%B1/" title="mail"><i class="icon-mail"></i></a>
 		        
 		</div>
-		<div style="position:absolute; bottom:-120px;left:auto;width:85%">
-			<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=240 height=86 src="//music.163.com/outchain/player?type=2&id=546723298&auto=1&height=66"></iframe>
-			</div>
 		</nav>
+
+		
+		
 	</header>
 </div>
+
+
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.css">
+		<div id="aplayer" style="position:absolute;left;0;bottom:0;"></div>
+		<script src="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/color-thief-don@2.0.2/src/color-thief.js"></script>
+		<script>
+		  const ap = new APlayer({
+		    container: document.getElementById('aplayer'),
+		    autoplay: true,
+		    listFolded: true,
+		    listMaxHeight: 90,
+		    order: 'list',
+		    loop: 'all',
+		    theme: '#e9e9e9',
+		    preload: 'none',
+		    mutex: true,
+		    volume: 0.7, 
+		    fixed: true, 
+		    audio: [{
+			name: '���뿪���Ͼ�,�Ӵ�û���˺���˵��',
+			artist: '��־',
+			cover: 'https://lijinsheng-0924-1301228855.cos.ap-nanjing.myqcloud.com/photo/%E4%BD%A0%E7%A6%BB%E5%BC%80%E4%BA%86%E5%8D%97%E4%BA%AC%E4%BB%8E%E6%AD%A4%E6%B2%A1%E4%BA%BA%E5%92%8C%E6%88%91%E8%AF%B4%E8%AF%9D.jpg',
+			url: 'https://lijinsheng-0924-1301228855.cos.ap-nanjing.myqcloud.com/music/%E4%BD%A0%E7%A6%BB%E5%BC%80%E4%BA%86%E5%8D%97%E4%BA%AC%2C%E4%BB%8E%E6%AD%A4%E6%B2%A1%E6%9C%89%E4%BA%BA%E5%92%8C%E6%88%91%E8%AF%B4%E8%AF%9D.mp3',
+		      },
+		      {
+			name: '��������ɳ��',
+			artist: '��ľ�괺',
+			cover: 'https://lijinsheng-0924-1301228855.cos.ap-nanjing.myqcloud.com/photo/%E5%96%89%E5%92%99%E5%94%B1%E7%9A%84%E6%B2%99%E5%93%91.jpg',
+			url: 'http://music.163.com/song/media/outer/url?id=1439142552.mp3'
+		      }
+		    ]
+		  });
+
+		  const colorThief = new ColorThief();
+		  const setTheme = (index) => {
+		    if (!ap.list.audios[index].theme) {
+		      colorThief.getColorAsync(ap.list.audios[index].cover, function(color) {
+			ap.theme(`rgb(${color[0]}, ${color[1]}, ${color[2]})`, index);
+		      });
+		    }
+		  };
+		  setTheme(ap.list.index);
+		  ap.on('listswitch', (data) => {
+		    setTheme(data.index);
+		  });
+		</script>
+		
 
 
     </div>
@@ -173,26 +222,9 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <div id="aplayer-mJnVgmOY" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
-            <pre class="aplayer-lrc-content"></pre>
-        </div>
-        <script>
-          var ap = new APlayer({
-            element: document.getElementById("aplayer-mJnVgmOY"),
-            narrow: false,
-            autoplay: false,
-            showlrc: false,
-            music: {
-              title: "喉咙唱的沙哑",
-              author: "枯木逢春",
-              url: "http://music.163.com/song/media/outer/url?id=1439142552.mp3",
-              pic: "",
-              lrc: ""
-            }
-          });
-          window.aplayers || (window.aplayers = []);
-          window.aplayers.push(ap);
-        </script>
+        <div id="aplayer-HujnmfVK" class="aplayer aplayer-tag-marker meting-tag-marker"
+         data-id="1439142552" data-server="netease" data-type="song" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#555"
+    ></div>
         
           <a class="article-more-a" href="/2020/07/05/music-test/#more">more >></a>
         
