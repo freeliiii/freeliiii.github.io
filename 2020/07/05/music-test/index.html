@@ -15,7 +15,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://lijinsheng-0924-1301228855.cos.ap-nanjing.myqcloud.com/photo/%E5%96%89%E5%92%99%E5%94%B1%E7%9A%84%E6%B2%99%E5%93%91.JPG">
 <meta property="article:published_time" content="2020-07-05T09:10:47.000Z">
-<meta property="article:modified_time" content="2020-07-07T09:13:49.269Z">
+<meta property="article:modified_time" content="2020-07-07T09:28:29.053Z">
 <meta property="article:author" content="李金圣">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://lijinsheng-0924-1301228855.cos.ap-nanjing.myqcloud.com/photo/%E5%96%89%E5%92%99%E5%94%B1%E7%9A%84%E6%B2%99%E5%93%91.JPG">
@@ -100,52 +100,52 @@
 </div>
 
 
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.css">
-		<div id="aplayer" style="position:absolute;left;0;bottom:0;"></div>
-		<script src="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.js"></script>
-		<script src="https://cdn.jsdelivr.net/npm/color-thief-don@2.0.2/src/color-thief.js"></script>
-		<script>
-		  const ap = new APlayer({
-		    container: document.getElementById('aplayer'),
-		    autoplay: true,
-		    listFolded: true,
-		    listMaxHeight: 90,
-		    order: 'list',
-		    loop: 'all',
-		    theme: '#e9e9e9',
-		    preload: 'none',
-		    mutex: true,
-		    volume: 0.7, 
-		    fixed: true, 
-		    audio: [{
-			name: '���뿪���Ͼ�,�Ӵ�û���˺���˵��',
-			artist: '��־',
-			cover: 'https://lijinsheng-0924-1301228855.cos.ap-nanjing.myqcloud.com/photo/%E4%BD%A0%E7%A6%BB%E5%BC%80%E4%BA%86%E5%8D%97%E4%BA%AC%E4%BB%8E%E6%AD%A4%E6%B2%A1%E4%BA%BA%E5%92%8C%E6%88%91%E8%AF%B4%E8%AF%9D.jpg',
-			url: 'https://lijinsheng-0924-1301228855.cos.ap-nanjing.myqcloud.com/music/%E4%BD%A0%E7%A6%BB%E5%BC%80%E4%BA%86%E5%8D%97%E4%BA%AC%2C%E4%BB%8E%E6%AD%A4%E6%B2%A1%E6%9C%89%E4%BA%BA%E5%92%8C%E6%88%91%E8%AF%B4%E8%AF%9D.mp3',
-		      },
-		      {
-			name: '��������ɳ��',
-			artist: '��ľ�괺',
-			cover: 'https://lijinsheng-0924-1301228855.cos.ap-nanjing.myqcloud.com/photo/%E5%96%89%E5%92%99%E5%94%B1%E7%9A%84%E6%B2%99%E5%93%91.jpg',
-			url: 'http://music.163.com/song/media/outer/url?id=1439142552.mp3'
-		      }
-		    ]
-		  });
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.css">
+<div id="aplayer" style="position:absolute;left;0;bottom:0;"></div>
+<script src="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/color-thief-don@2.0.2/src/color-thief.js"></script>
+<script>
+const ap = new APlayer({
+container: document.getElementById('aplayer'),
+autoplay: true,
+listFolded: true,
+listMaxHeight: 90,
+order: 'list',
+loop: 'all',
+theme: '#e9e9e9',
+preload: 'none',
+mutex: true,
+volume: 0.7, 
+fixed: true, 
+audio: [{
+	name: 'You left Nanjing and no one talked to me since then',
+	artist: 'Lizhi',
+	cover: 'https://lijinsheng-0924-1301228855.cos.ap-nanjing.myqcloud.com/photo/%E4%BD%A0%E7%A6%BB%E5%BC%80%E4%BA%86%E5%8D%97%E4%BA%AC%E4%BB%8E%E6%AD%A4%E6%B2%A1%E4%BA%BA%E5%92%8C%E6%88%91%E8%AF%B4%E8%AF%9D.jpg',
+	url: 'https://lijinsheng-0924-1301228855.cos.ap-nanjing.myqcloud.com/music/%E4%BD%A0%E7%A6%BB%E5%BC%80%E4%BA%86%E5%8D%97%E4%BA%AC%2C%E4%BB%8E%E6%AD%A4%E6%B2%A1%E6%9C%89%E4%BA%BA%E5%92%8C%E6%88%91%E8%AF%B4%E8%AF%9D.mp3',
+	},
+	{
+	name: 'City of sky',
+	artist: 'Joe Hisaishi',
+	cover: 'https://lijinsheng-0924-1301228855.cos.ap-nanjing.myqcloud.com/photo/%E5%A4%A9%E7%A9%BA%E4%B9%8B%E5%9F%8E.jpg',
+	url: 'http://music.163.com/song/media/outer/url?id=864711417.mp3'
+	}
+	]
+	});
 
-		  const colorThief = new ColorThief();
-		  const setTheme = (index) => {
-		    if (!ap.list.audios[index].theme) {
-		      colorThief.getColorAsync(ap.list.audios[index].cover, function(color) {
-			ap.theme(`rgb(${color[0]}, ${color[1]}, ${color[2]})`, index);
-		      });
-		    }
-		  };
-		  setTheme(ap.list.index);
-		  ap.on('listswitch', (data) => {
-		    setTheme(data.index);
-		  });
-		</script>
-		
+const colorThief = new ColorThief();
+const setTheme = (index) => {
+if (!ap.list.audios[index].theme) {
+colorThief.getColorAsync(ap.list.audios[index].cover, function(color) {
+ap.theme(`rgb(${color[0]}, ${color[1]}, ${color[2]})`, index);
+});
+}
+};
+setTheme(ap.list.index);
+ap.on('listswitch', (data) => {
+setTheme(data.index);
+});
+</script>
+
 
 
     </div>
@@ -225,7 +225,7 @@
     <div class="article-entry" itemprop="articleBody">
       
         
-    <div id="aplayer-HujnmfVK" class="aplayer aplayer-tag-marker meting-tag-marker"
+    <div id="aplayer-FYrRLUgc" class="aplayer aplayer-tag-marker meting-tag-marker"
          data-id="1439142552" data-server="netease" data-type="song" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#555"
     ></div>
 <a id="more"></a>
